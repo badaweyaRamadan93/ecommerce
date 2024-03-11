@@ -1,0 +1,210 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap');
+
+:root {
+    --main-color: #0aad0a;
+    --light-color: #f0f3f2;
+    --shadow: rgba(145, 158, 171, .2) 0px 2px 4px -1px, rgba(145, 158, 171, .14) 0px 4px 5px 0px, rgba(145, 158, 171, .12) 0px 1px 10px 0px;
+    --font-family: 'Encode Sans Expanded', sans-serif;
+    --rating-color: #ffc908;
+}
+
+body {
+    font-family: var(--font-family) !important;
+}
+
+.rating-color {
+    color: var(--rating-color);
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+a,
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.product:hover,
+.card:hover {
+    box-shadow: var(--shadow);
+    border: solid 1px var(--main-color);
+}
+
+.card {
+    transition: 300ms;
+}
+
+.product .btn {
+    transition: transform 1s, opacity 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.product:hover .btn {
+    opacity: 1;
+    transform: translateY(0%);
+}
+
+.font-sm {
+    font-size: 14px;
+}
+
+.text-main {
+    color: var(--main-color);
+}
+
+.fit {
+    width: fit-content !important;
+}
+
+.bg-main {
+    background-color: var(--main-color) !important;
+}
+
+.bg-main-light {
+    background-color: var(--light-color) !important;
+}
+
+.nav {
+    z-index: 900;
+}
+
+.nav-link.active {
+    color: #0aad0a !important;
+    font-weight: 700;
+}
+
+.nav-link:hover {
+    color: #0aad0a !important;
+    font-weight: 700;
+    transition: none;
+    box-shadow: none;
+}
+
+.products-container,
+.cart {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+div a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-heart {
+    transition: 400ms;
+}
+
+/* Loader */
+.loading {
+    z-index: 10000;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    border-top: 4px solid #FFF;
+    border-right: 4px solid transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border-left: 4px solid #0aad0a;
+    border-bottom: 4px solid transparent;
+    animation: rotation 0.5s linear infinite reverse;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* End Loader */
+
+/* Home sliders */
+.rounded-top-left {
+    border-top-left-radius: .5rem;
+}
+
+.rounded-top-right {
+    border-top-right-radius: .5rem;
+}
+
+.slide {
+    cursor: grab;
+}
+
+@media (max-width:600px) {
+    .slide img {
+        max-height: 200px;
+    }
+
+    .slide img,
+    .rounded-top-right {
+        border-radius: 0;
+    }
+
+    .CategorySlider {
+        display: none;
+    }
+
+    .layout .products-container {
+        margin: 0px !important;
+    }
+}
+
+/* Home sliders */
+
+.cart-icon {
+    position: relative;
+    transition: 400ms;
+}
+
+.cart-icon:hover {
+    color: var(--main-color);
+}
+
+.cart-icon .cart-num {
+    position: absolute;
+    font-size: 10px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 5px;
+    border-radius: 1rem;
+    top: -10px;
+    right: -5px;
+    transition: 400ms;
+}
+
+.search:focus {
+    box-shadow: 0 0 0 0.25rem #0aad0a99 !important;
+    border-color: #0aad0a;
+}
+
+
+@media (min-width:600px) {
+    .search {
+        width: 70% !important;
+    }
+}
+
+/* End Home sliders */

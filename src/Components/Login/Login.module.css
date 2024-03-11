@@ -1,0 +1,9 @@
+form a {
+    display: block;
+    text-decoration: none;
+    color: #0aad0a;
+}
+
+form a:hover {
+    color: #0a7e0a;
+}
